@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload - My Change2-without restart docker - with docker-compose start2 - For Nginx.
+            Edit <code>src/App.js</code> and save to reload - My Change2-without restart docker - with docker-compose start2 - For Nginx - Added to feature branch.
           </p>
           <a
             className="App-link"
