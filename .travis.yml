@@ -7,3 +7,18 @@ before_install:
 
 script:
   - docker run tammali/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-us-east-1-692446726552"
+  bucket_path: "docker-react"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
+
+# AWS docker app link:  http://dockerreact-env.s33mfawzqv.us-east-1.elasticbeanstalk.com/
